@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "/h+Tk8c91AtDyAELsSF0H3KolEI86sg8q6u3JjUFxQY=",
+  "Source": "ServiceManagement.WebAPI",
+  "BasePath": "_content/ServiceManagement.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

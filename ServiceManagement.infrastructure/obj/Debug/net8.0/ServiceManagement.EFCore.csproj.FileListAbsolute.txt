@@ -1,0 +1,17 @@
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\bin\Debug\net8.0\ServiceManagement.EFCore.deps.json
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\bin\Debug\net8.0\ServiceManagement.EFCore.runtimeconfig.json
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\bin\Debug\net8.0\ServiceManagement.EFCore.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\bin\Debug\net8.0\ServiceManagement.EFCore.pdb
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\bin\Debug\net8.0\ServiceManagement.Domain.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\bin\Debug\net8.0\ServiceManagement.Domain.pdb
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\obj\Debug\net8.0\ServiceManagement.EFCore.csproj.AssemblyReference.cache
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\obj\Debug\net8.0\ServiceManagement.EFCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\obj\Debug\net8.0\ServiceManagement.EFCore.AssemblyInfoInputs.cache
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\obj\Debug\net8.0\ServiceManagement.EFCore.AssemblyInfo.cs
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\obj\Debug\net8.0\ServiceManagement.EFCore.csproj.CoreCompileInputs.cache
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\obj\Debug\net8.0\ServiceM.8E7994D8.Up2Date
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\obj\Debug\net8.0\ServiceManagement.EFCore.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\obj\Debug\net8.0\refint\ServiceManagement.EFCore.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\obj\Debug\net8.0\ServiceManagement.EFCore.pdb
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\obj\Debug\net8.0\ServiceManagement.EFCore.genruntimeconfig.cache
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.infrastructure\obj\Debug\net8.0\ref\ServiceManagement.EFCore.dll

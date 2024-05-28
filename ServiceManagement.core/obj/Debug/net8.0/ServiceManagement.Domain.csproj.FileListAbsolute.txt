@@ -1,0 +1,12 @@
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\bin\Debug\net8.0\ServiceManagement.Domain.deps.json
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\bin\Debug\net8.0\ServiceManagement.Domain.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\bin\Debug\net8.0\ServiceManagement.Domain.pdb
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\obj\Debug\net8.0\ServiceManagement.Domain.csproj.AssemblyReference.cache
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\obj\Debug\net8.0\ServiceManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\obj\Debug\net8.0\ServiceManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\obj\Debug\net8.0\ServiceManagement.Domain.AssemblyInfo.cs
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\obj\Debug\net8.0\ServiceManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\obj\Debug\net8.0\ServiceManagement.Domain.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\obj\Debug\net8.0\refint\ServiceManagement.Domain.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\obj\Debug\net8.0\ServiceManagement.Domain.pdb
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServiceManagement.core\obj\Debug\net8.0\ref\ServiceManagement.Domain.dll
