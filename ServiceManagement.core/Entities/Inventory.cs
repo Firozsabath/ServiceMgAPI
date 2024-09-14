@@ -29,6 +29,8 @@ namespace ServiceManagement.Domain.Entities
         public DateTime? UpdatedDate { get; set; }
         public long? Vendorid { get; set; }
         public string? SkuID { get; set; }
+        public bool? IsVatApplied { get; set; }
+        public int? VatPercent { get; set; }
 
         [ForeignKey("Vendorid")]
         public virtual Vendors? vendor { get; set; }

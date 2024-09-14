@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServiceManagement.EFCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95997cdf60205804fd79654568dba18192f393b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServiceManagement.EFCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServiceManagement.EFCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

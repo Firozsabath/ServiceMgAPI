@@ -1,0 +1,79 @@
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 00:02:44
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 00:02:43 GET / - 171.244.43.14 HTTP/1.1 Mozilla/5.0+(Linux;+Android+10;+K)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/122.0.0.0+Mobile+Safari/537.36 - 404 144 256
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 00:34:47
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 00:34:47 GET / - 135.148.100.196 HTTP/1.1 - - 404 144 118
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 01:04:01
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 01:04:00 GET / - 5.164.29.116 HTTP/1.1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/112.0.0.0+Safari/537.36+(scanner.ducks.party) - 404 144 214
+2024-09-01 01:04:00 GET /favicon.ico - 5.164.29.116 HTTP/1.1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/112.0.0.0+Safari/537.36+(scanner.ducks.party) - 404 144 225
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 01:28:54
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 01:28:54 GET / - 104.166.80.0 HTTP/1.1 Mozilla/5.0+(X11;+Linux+i686;+rv:109.0)+Gecko/20100101+Firefox/120.0 - 404 144 355
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 01:58:29
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 01:58:29 GET / - 142.93.210.122 HTTP/1.1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/126.0.0.0+Safari/537.36 - 307 174 426
+2024-09-01 01:58:29 GET / - 142.93.210.122 HTTP/1.1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/126.0.0.0+Safari/537.36 - 404 144 426
+2024-09-01 01:58:38 GET / - 104.166.80.198 HTTP/1.1 Mozilla/5.0+(X11;+Linux+i686;+rv:109.0)+Gecko/20100101+Firefox/120.0 - 404 144 359
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 06:38:53
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 06:38:53 POST /api/auth/login - 34.96.45.19 HTTP/2 Proxyscotch/1.1 - 500 0 319
+2024-09-01 06:54:02 GET /api/Machines - 92.99.188.217 HTTP/2 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/127.0.0.0+Safari/537.36 - 200 2 693
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 08:09:41
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 08:09:41 GET / - 5.164.29.116 HTTP/1.1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/112.0.0.0+Safari/537.36+(scanner.ducks.party) - 404 144 214
+2024-09-01 08:09:41 GET /favicon.ico - 5.164.29.116 HTTP/1.1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/112.0.0.0+Safari/537.36+(scanner.ducks.party) - 404 144 225
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 09:23:36
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 09:23:35 GET / - 87.236.176.101 HTTP/1.1 Mozilla/5.0+(compatible;+InternetMeasurement/1.0;++https://internet-measurement.com/) - 307 189 198
+2024-09-01 09:23:36 GET / - 87.236.176.101 HTTP/1.1 Mozilla/5.0+(compatible;+InternetMeasurement/1.0;++https://internet-measurement.com/) http://api.beanbalance.ae 404 163 234
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 10:55:36
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 10:55:36 OPTIONS /api/Auth/login - 92.99.188.217 HTTP/2 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/127.0.0.0+Safari/537.36 http://localhost:4200/ 204 0 549
+2024-09-01 10:55:56 OPTIONS /api/Auth/login - 92.99.188.217 HTTP/2 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/127.0.0.0+Safari/537.36 http://localhost:4200/ 204 0 549
+2024-09-01 10:56:01 POST /api/Auth/login - 92.99.188.217 HTTP/2 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/127.0.0.0+Safari/537.36 http://localhost:4200/ 401 165 726
+2024-09-01 10:58:50 OPTIONS /api/Auth/login - 92.99.188.217 HTTP/2 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/127.0.0.0+Safari/537.36 http://localhost:4200/ 204 0 549
+2024-09-01 10:58:51 POST /api/Auth/login - 92.99.188.217 HTTP/2 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/127.0.0.0+Safari/537.36 http://localhost:4200/ 500 0 726
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 11:16:01
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 11:16:01 GET / - 207.241.225.114 HTTP/1.1 Mozilla/5.0+(compatible;+archive.org_bot++http://archive.org/details/archive.org_bot)+Zeno/8cdd3d9+warc/v0.8.43 - 404 163 215
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 11:50:07
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 11:50:07 GET / - 51.81.46.212 HTTP/1.1 - - 404 144 122
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 12:51:14
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 12:51:14 GET /wp-admin/setup-config.php - 165.22.110.5 HTTP/1.1 Apache/2.4.34+(Ubuntu)+OpenSSL/1.1.1+(internal+dummy+connection) - 307 202 177
+2024-09-01 12:51:14 GET /wp-admin/setup-config.php - 165.22.110.5 HTTP/2 Apache/2.4.34+(Ubuntu)+OpenSSL/1.1.1+(internal+dummy+connection) http://api.beanbalance.ae/wp-admin/setup-config.php?step=1 404 0 283
+2024-09-01 12:51:14 GET /wordpress/wp-admin/setup-config.php - 165.22.110.5 HTTP/1.1 Apache/2.4.34+(Ubuntu)+OpenSSL/1.1.1+(internal+dummy+connection) - 307 212 187
+2024-09-01 12:51:15 GET /wordpress/wp-admin/setup-config.php - 165.22.110.5 HTTP/2 Apache/2.4.34+(Ubuntu)+OpenSSL/1.1.1+(internal+dummy+connection) http://api.beanbalance.ae/wordpress/wp-admin/setup-config.php?step=1 404 0 303
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2024-09-01 13:07:44
+#Fields: date time cs-method cs-uri-stem cs-username c-ip cs-version cs(User-Agent) cs(Referer) sc-status sc-bytes cs-bytes
+2024-09-01 13:07:43 OPTIONS /api/Auth/login - 92.99.188.217 HTTP/2 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/127.0.0.0+Safari/537.36 https://apps.beanbalance.ae/ 204 0 560
+2024-09-01 13:07:43 POST /api/Auth/login - 92.99.188.217 HTTP/2 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/127.0.0.0+Safari/537.36 https://apps.beanbalance.ae/ 500 0 736

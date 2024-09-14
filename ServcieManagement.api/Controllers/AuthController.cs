@@ -3,12 +3,16 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.VisualBasic;
 using ServiceManagement.Domain.Entities;
 using ServiceManagement.Domain.Interfaces;
 using ServiceManagement.EFCore;
 using ServiceManagement.WebAPI.DTOs;
 using System.Data;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace ServiceManagement.WebAPI.Controllers
 {
@@ -94,8 +98,8 @@ namespace ServiceManagement.WebAPI.Controllers
             var user = await _userManager.FindByNameAsync(model.Username);
             if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))
             {
-                //var token = GenerateJwtToken(user);
-                var token = string.Empty;
+                var token = await GenerateJsonToken(user);
+                //var token = string.Empty;
 
                 return Ok(new { Token = token });
             }
@@ -153,6 +157,31 @@ namespace ServiceManagement.WebAPI.Controllers
             {
                 return Ok(re.Errors);
             }
+        }
+
+
+        private async Task<string> GenerateJsonToken(ApplicationUser user)
+        {
+            var technician = _techniciansop.Get(x => x.Email == user.Email);
+            var securitykey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
+            var credentials = new SigningCredentials(securitykey, SecurityAlgorithms.HmacSha256);
+            var claims = new List<Claim> {
+                new Claim(JwtRegisteredClaimNames.Sub, user.Email),
+                new Claim(JwtRegisteredClaimNames.Jti, technician.ID.ToString()),
+                new Claim(ClaimTypes.NameIdentifier,user.Id)                
+            };
+            var Roles = await _userManager.GetRolesAsync(user);
+            claims.AddRange(Roles.Select(r => new Claim(ClaimsIdentity.DefaultRoleClaimType, r)));
+
+            var token = new JwtSecurityToken(_configuration["JWT:ValidIssuer"]
+                , _configuration["JWT:ValidAudience"]
+                , claims
+                , null
+                , expires: DateTime.Now.AddHours(8)
+                , signingCredentials: credentials
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

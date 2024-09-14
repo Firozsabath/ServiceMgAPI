@@ -12,5 +12,6 @@
         public string? Address { get; set; }
         public string? CompanySize { get; set; }
         public string? Notes { get; set; }
+        public int? AssignedDiscount { get; set; }
     }
 }

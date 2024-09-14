@@ -2,6 +2,7 @@
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using ServiceManagement.Domain.Entities;
 using ServiceManagement.Domain.Interfaces;
+using ServiceManagement.WebAPI.DTOs;
 using System.Net.Http.Headers;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,15 +14,20 @@ namespace ServiceManagement.WebAPI.Controllers
     public class BranchesController : ControllerBase
     {
         private readonly IBranchesRepository _branchesrepo;
+        private readonly IWebHostEnvironment env;
+        private readonly ILogger<BranchesController> _logger;
 
-        public BranchesController(IBranchesRepository branchesrepo)
+        public BranchesController(IBranchesRepository branchesrepo, IWebHostEnvironment env, ILogger<BranchesController> logger)
         {
             _branchesrepo = branchesrepo;
+            this.env = env;
+            _logger = logger;
         }
         // GET: api/<BranchesController>
         [HttpGet]
         public IActionResult Get()
         {
+            _logger.LogInformation("Hit Branches Get Info");
             var branches = _branchesrepo.GetAll();
             return Ok(branches);
         }
@@ -78,8 +84,12 @@ namespace ServiceManagement.WebAPI.Controllers
             try
             {
                 var file = Request.Form.Files[0];
+
+                var branchID = Convert.ToInt32(Request.Form["branchID"]);
+                var filetype = Request.Form["ftype"].ToString();
                 var folderName = Path.Combine("Resources", "Uploads");
-                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+                //var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+                var pathToSave = Path.Combine(this.env.WebRootPath,folderName);
                 if (file.Length > 0)
                 {
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
@@ -87,8 +97,9 @@ namespace ServiceManagement.WebAPI.Controllers
                     var dbPath = Path.Combine(folderName, fileName);
                     using (var stream = new FileStream(fullPath, FileMode.Create))
                     {
-                        file.CopyTo(stream);
-                    }
+                       file.CopyTo(stream);
+                    }                    
+                    var st = this._branchesrepo.updateUploadedPath(dbPath, branchID, filetype);                    
                     return Ok(new { dbPath });
                 }
                 else
@@ -112,7 +123,7 @@ namespace ServiceManagement.WebAPI.Controllers
                 {
                     return BadRequest("Invalid branch info!");
                 }
-                _branchesrepo.Update(branch);
+                _branchesrepo.UpdateBranch(branch);
                 var st = _branchesrepo.save();
                 return Ok(st);
             }

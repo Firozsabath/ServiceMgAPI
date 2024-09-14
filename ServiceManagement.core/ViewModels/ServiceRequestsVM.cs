@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ServiceManagement.Domain.Entities;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +31,17 @@ namespace ServiceManagement.Domain.ViewModels
         public string? RespondMessage { get; set; }
         public string? TechnicianComment { get; set; }
         public string? RequestID { get; set; }
+        public IList<TechnicianNotesVM>? Notes { get; set; }
+        public IList<ServiceRequestAttachments>? Attachments { get; set; }
 
+    }
+
+    public class TechnicianNotesVM
+    {
+        public string Status { get; set; }
+        public string TechnicianName { get; set; }
+        public string Notes { get; set; }
+        public DateTime? CreatedDate { get; set; }
     }
 
     public class ChartVM

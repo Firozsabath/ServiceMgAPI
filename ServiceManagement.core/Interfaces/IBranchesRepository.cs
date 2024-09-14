@@ -11,5 +11,9 @@ namespace ServiceManagement.Domain.Interfaces
     public interface IBranchesRepository: IRepositoryBase<Branches>
     {
         List<BranchWithCompany> GetBranchwithCompnay();
+
+        bool updateUploadedPath(string filepath, int branchID, string ftype);
+
+        void UpdateBranch(Branches branches);
     }
 }

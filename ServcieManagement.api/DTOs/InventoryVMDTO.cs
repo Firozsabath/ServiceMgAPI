@@ -21,5 +21,7 @@
         public long? Vendorid { get; set; }
         public string VendorName { get; set; }
         public string skuID { get; set; }
+        public bool? IsVatApplied { get; set; }
+        public int? VatPercent { get; set; }
     }
 }

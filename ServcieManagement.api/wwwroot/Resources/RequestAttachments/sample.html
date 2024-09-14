@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player with Bootstrap Styling</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">	
+    <style>
+        .container{
+           max-width: 1300px; 
+        }
+    </style>
+</head>
+<body class="bg-light text-center">
+
+<div class="container mt-5">
+
+    <!-- Video Player -->
+    <video id="myVideo" class="w-100 mb-4" controls autoplay loop muted>
+        <source src="your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Display Current Time as a Clock -->
+    <div id="clock" class="display-4 font-weight-bold" style="font-size: 8.5rem;"></div>
+
+     <!-- Display Today's Date -->
+     <div id="date" class="lead fw-bold"></div>
+
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Get video element
+    var video = document.getElementById("myVideo");
+
+    // Get clock element
+    var clockElement = document.getElementById("clock");
+
+     // Get date element
+     var dateElement = document.getElementById("date");
+
+    // Update clock display
+    function updateClock() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+
+        // Add leading zeros if needed
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        clockElement.textContent = hours + ":" + minutes + ":" + seconds;
+
+        // Update date display
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        var formattedDate = currentTime.toLocaleDateString(undefined, options);
+        dateElement.textContent = formattedDate;
+    }
+
+    // Update clock on timeupdate event
+    video.addEventListener("timeupdate", updateClock);
+    setInterval(updateClock, 1000); // Update every second
+</script>
+
+</body>
+</html>

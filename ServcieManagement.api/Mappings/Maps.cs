@@ -10,6 +10,9 @@ namespace ServiceManagement.WebAPI.Mappings
         {
             CreateMap<CompanyDTO, Companies>().ReverseMap();
             CreateMap<TechniciansDTO, Technicians>().ReverseMap();
+            CreateMap<RequestTypesDTO, RequestTypes>().ReverseMap();
+            CreateMap<RequestPrioritiesDTO, PriorityLevels>().ReverseMap();
+            CreateMap<ServiceRequestsDTO, ServiceRequests>().ReverseMap();
         }
     }
 }

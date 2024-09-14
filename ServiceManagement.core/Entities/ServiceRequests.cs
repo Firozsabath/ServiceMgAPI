@@ -46,5 +46,7 @@ namespace ServiceManagement.Domain.Entities
         public ServiceStatuses? ServiceStatus { get; set; }
 
         public IEnumerable<ServiceParts>? ServiceParts { get; set; }
+        public IEnumerable<TechniciansNotes>? TechniciansNotes { get; set; }
+        public IEnumerable<ServiceRequestAttachments>? ServiceRequestAttachments { get; set; }
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
+using static Azure.Core.HttpHeader;
 
 namespace ServiceManagement.EFCore.Repositories
 {
@@ -111,6 +112,18 @@ namespace ServiceManagement.EFCore.Repositories
 
         public ServiceRequestsVM GetByTicketID(long id)
         {
+
+            var techNotes = _db.TechniciansNotes.Include(t => t.Technicians).Include(t => t.ServiceStatuses).Where(s=>s.RequestID == id).Select(
+                tn => new TechnicianNotesVM
+                {
+                    Notes = tn.Notes,
+                    CreatedDate = tn.CreatedDate,
+                    Status = tn.ServiceStatuses.Description,
+                    TechnicianName = tn.Technicians.Name
+                }).OrderByDescending(x => x.CreatedDate).ToList();
+
+            var attachments = _db.ServiceRequestAttachments.Where(a=>a.RequestID == id).ToList();
+
             var task = _db.ServiceRequests.Include(a => a.Techincian)
                .Include(a => a.ServiceStatus)
                .Include(a => a.PriorityLevel)
@@ -138,7 +151,9 @@ namespace ServiceManagement.EFCore.Repositories
                    RespondedinHours = s.RespondedinHours,
                    RespondMessage = s.RespondMessage,
                    TechnicianComment = s.TechnicianComment,
-                   RequestID = s.RequestID
+                   RequestID = s.RequestID,
+                   Notes = techNotes,
+                   Attachments = attachments
                }).FirstOrDefault();
             return task;
         }

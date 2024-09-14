@@ -42,7 +42,9 @@ namespace ServiceManagement.WebAPI.Controllers
                 UpdatedDate = i.UpdatedDate,
                 Vendorid = i.Vendorid,
                 VendorName = i.vendor.Name,
-                skuID = i.SkuID
+                skuID = i.SkuID,
+                IsVatApplied = i.IsVatApplied,
+                VatPercent = i.VatPercent
                 
             }).ToList();           
             return Ok(invs);

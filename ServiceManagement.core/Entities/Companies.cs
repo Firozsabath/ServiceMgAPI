@@ -20,6 +20,7 @@ namespace ServiceManagement.Domain.Entities
         public string? Address { get; set; }
         public string? CompanySize { get; set; }
         public string? Notes { get; set; }
+        public int? AssignedDiscount { get; set; }
 
         public IEnumerable<Branches>? Branches { get; set; }
     }

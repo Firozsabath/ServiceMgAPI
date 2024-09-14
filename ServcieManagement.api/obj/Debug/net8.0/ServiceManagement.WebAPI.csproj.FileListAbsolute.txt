@@ -1,5 +1,6 @@
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\appsettings.json
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\ServiceManagement.WebAPI.staticwebassets.runtime.json
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\ServiceManagement.WebAPI.exe
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\ServiceManagement.WebAPI.deps.json
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\ServiceManagement.WebAPI.runtimeconfig.json
@@ -9,6 +10,7 @@ C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\b
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Humanizer.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -68,6 +70,15 @@ C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\b
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\NuGet.ProjectModel.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\NuGet.Protocol.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\NuGet.Versioning.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Serilog.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Serilog.Sinks.File.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -85,6 +96,7 @@ C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\b
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\af\Humanizer.resources.dll
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\bin\Debug\net8.0\ar\Humanizer.resources.dll
@@ -247,6 +259,7 @@ C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\o
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\obj\Debug\net8.0\ServiceManagement.WebAPI.csproj.CoreCompileInputs.cache
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\obj\Debug\net8.0\ServiceManagement.WebAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\obj\Debug\net8.0\ServiceManagement.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\obj\Debug\net8.0\ServiceManagement.WebAPI.sourcelink.json
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\firoz.sabath\source\repos\ServcieManagement.api\ServcieManagement.api\obj\Debug\net8.0\staticwebassets\msbuild.ServiceManagement.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props

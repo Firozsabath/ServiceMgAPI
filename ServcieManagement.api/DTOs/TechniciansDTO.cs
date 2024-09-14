@@ -6,6 +6,7 @@
         public string? Name { get; set; }
         public string? Position { get; set; }
         public string? ImgUrl { get; set; }
+        public string? Email { get; set; }
         public DateTime? CreatedTime { get; set; }
         public DateTime? UpdateTime { get; set; }
     }

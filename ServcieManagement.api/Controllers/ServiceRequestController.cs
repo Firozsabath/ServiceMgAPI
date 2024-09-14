@@ -1,8 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Operations;
+using Microsoft.VisualBasic.FileIO;
 using Newtonsoft.Json.Linq;
 using ServiceManagement.Domain.Entities;
 using ServiceManagement.Domain.Interfaces;
 using ServiceManagement.WebAPI.DTOs;
+using System.Net.Http.Headers;
+using System.Net.Mail;
 using System.Reflection.PortableExecutable;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -16,11 +21,20 @@ namespace ServiceManagement.WebAPI.Controllers
     {
         private readonly IServiceRequestsRepository _serviceRequests;
         private readonly IRequestSequenceRepository _requestSequence;
+        private readonly ITechniciansNotesRespository _techniciansNotes;
+        private readonly IMapper mapper;
+        private readonly IWebHostEnvironment env;
+        private readonly IServiceRequestAttachmentsRepository requestAttachemnets;
 
-        public ServiceRequestController(IServiceRequestsRepository serviceRequests, IRequestSequenceRepository requestSequence)
+        public ServiceRequestController(IServiceRequestsRepository serviceRequests, IRequestSequenceRepository requestSequence, 
+            ITechniciansNotesRespository techniciansNotes, IMapper mapper, IWebHostEnvironment env, IServiceRequestAttachmentsRepository requestAttachemnets)
         {
             _serviceRequests = serviceRequests;
             _requestSequence = requestSequence;
+            _techniciansNotes = techniciansNotes;
+            this.mapper = mapper;
+            this.env = env;
+            this.requestAttachemnets = requestAttachemnets;
         }
         // GET: api/<ServiceRequests>
         [HttpGet]
@@ -53,6 +67,15 @@ namespace ServiceManagement.WebAPI.Controllers
             return Ok(serviceRequests);
         }
 
+        [HttpGet("GetRequestPaginated")]
+        public async Task<IActionResult> GetRequestPaginated(
+           [FromQuery] int pageNumber,
+           [FromQuery] int recordCount)
+        {
+            var serviceRequests = await _serviceRequests.GetWithOffsetPagination(pageNumber, recordCount);
+            return Ok(serviceRequests);
+        }
+
         // GET api/<ServiceRequests>/5
         [HttpGet("{id}")]
         public IActionResult Get(long id)
@@ -69,10 +92,11 @@ namespace ServiceManagement.WebAPI.Controllers
 
         // POST api/<ServiceRequests>
         [HttpPost]
-        public  IActionResult Post([FromBody] ServiceRequests data)
+        public async Task<IActionResult> Post([FromForm] ServiceRequestsDTO request)
         {
             try
             {
+                var data = this.mapper.Map<ServiceRequests>(request);
 
                 if (data == null)
                 {
@@ -88,9 +112,38 @@ namespace ServiceManagement.WebAPI.Controllers
                 _serviceRequests.Add(data);
                
                 var st = _serviceRequests.save();
+
+                if (st)
+                {                   
+                    if(request.Documents != null)
+                    {
+                        var rID = data.ID;
+                        var folderName = Path.Combine("Resources", "RequestAttachments");
+                        var pathToSave = Path.Combine(this.env.WebRootPath, folderName);
+                        var attachment = new List<ServiceRequestAttachments>();
+                        foreach (var file in request.Documents)
+                        {
+                            if (file.Length > 0)
+                            {
+                                var fileName = file.FileName;
+                                var fullPath = Path.Combine(pathToSave, fileName);
+                                var dbPath = Path.Combine(folderName, fileName);
+                                using (var stream = new FileStream(fullPath, FileMode.Create))
+                                {
+                                    await file.CopyToAsync(stream);
+                                }
+                                attachment.Add(new ServiceRequestAttachments { RequestID = rID, FileName = fileName, FilePath = dbPath });
+                            }
+                        }
+                        this.requestAttachemnets.AddRange(attachment);
+                        var st1 = this.requestAttachemnets.save();
+                    }                    
+                }
+
                 if (st)
                 {
-                    return Ok(data);
+                    //return Ok(data);
+                    return Ok();
                 }
 
                 return BadRequest("Something went wrong!");
@@ -120,7 +173,7 @@ namespace ServiceManagement.WebAPI.Controllers
         {
             if (data == null)
             {
-                return BadRequest("Company value is not valid!");
+                return BadRequest("Service Request is not valid!");
             }
             var request = this._serviceRequests.Get(x => x.ID == data.ServiceID);
             if(request == null)
@@ -134,9 +187,20 @@ namespace ServiceManagement.WebAPI.Controllers
                 request.ComplatedDate = DateTime.Now;
             }
             //var company = _mapper.Map<Companies>(requests);
+            var techncianID = request.TechnicianID;
             this._serviceRequests.Update(request);
             var status = this._serviceRequests.save();
-            return Ok(status);
+            var techNotes = new TechniciansNotes
+            {
+                RequestID = data.ServiceID,
+                StatusID = data.ServiceStatusID,
+                CreatedDate = DateTime.Now,
+                TechnicianID = data.TechnicianID,
+                Notes = data.TechnicianComment
+            };
+            _techniciansNotes.Add(techNotes);
+           var  st =  _techniciansNotes.save();
+            return Ok(st);
         }
 
         [HttpPut("RespondRequest/{id}")]
@@ -168,7 +232,7 @@ namespace ServiceManagement.WebAPI.Controllers
         {
             try
             {
-                var request = _serviceRequests.Get(x => x.ID == id,x=>x.ServiceParts);
+                var request = _serviceRequests.Get(x => x.ID == id,x=>x.ServiceParts,s=>s.ServiceRequestAttachments);
                 if (request == null)
                 {
                     return NotFound("No data found for the id!");

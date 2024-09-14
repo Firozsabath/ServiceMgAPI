@@ -19,6 +19,7 @@ namespace ServiceManagement.EFCore
         public DbSet<Machines> Machines { get; set; }
         public DbSet<Technicians> Technicians { get; set; }
         public DbSet<ServiceRequests> ServiceRequests { get; set; }
+        public DbSet<ServiceRequestAttachments> ServiceRequestAttachments { get; set; }
         public DbSet<Inventory> Inventory { get; set; }
         public DbSet<RequestTypes> RequestTypes { get; set; }
         public DbSet<PriorityLevels> PriorityLevels { get; set; }
@@ -26,5 +27,8 @@ namespace ServiceManagement.EFCore
         public DbSet<ContractTypes> ContractTypes { get; set; }
         public DbSet<ServiceParts> ServiceParts { get; set; }
         public DbSet<RequestSequence> RequestSequence { get; set; }
+        public DbSet<TechniciansNotes> TechniciansNotes { get; set; }
+        public DbSet<Quotations> Quotations { get; set; }
+        public DbSet<QuotationItems> QuotationItems { get; set; }
     }
 }

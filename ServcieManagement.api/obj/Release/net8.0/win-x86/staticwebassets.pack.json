@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\ANZIYAEMID2.pdf",
+      "PackagePath": "staticwebassets\\ANZIYAEMID2.pdf"
+    },
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\AnziyaEMID1.pdf",
+      "PackagePath": "staticwebassets\\AnziyaEMID1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\Resources\\RequestAttachments\\Pathucv.pdf",
+      "PackagePath": "staticwebassets\\Resources\\RequestAttachments\\Pathucv.pdf"
+    },
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\Resources\\RequestAttachments\\SB Collect.pdf",
+      "PackagePath": "staticwebassets\\Resources\\RequestAttachments\\SB Collect.pdf"
+    },
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\Resources\\RequestAttachments\\anziya.rtf",
+      "PackagePath": "staticwebassets\\Resources\\RequestAttachments\\anziya.rtf"
+    },
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\Resources\\RequestAttachments\\default.jpg",
+      "PackagePath": "staticwebassets\\Resources\\RequestAttachments\\default.jpg"
+    },
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\Resources\\RequestAttachments\\sample.html",
+      "PackagePath": "staticwebassets\\Resources\\RequestAttachments\\sample.html"
+    },
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\Resources\\Uploads\\Ayaan_visa.pdf",
+      "PackagePath": "staticwebassets\\Resources\\Uploads\\Ayaan_visa.pdf"
+    },
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\Resources\\Uploads\\Filled-Moh1.pdf",
+      "PackagePath": "staticwebassets\\Resources\\Uploads\\Filled-Moh1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\Resources\\Uploads\\QR1.png",
+      "PackagePath": "staticwebassets\\Resources\\Uploads\\QR1.png"
+    },
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\Resources\\Uploads\\Resume.pdf",
+      "PackagePath": "staticwebassets\\Resources\\Uploads\\Resume.pdf"
+    },
+    {
+      "Id": "C:\\Users\\firoz.sabath\\source\\repos\\ServcieManagement.api\\ServcieManagement.api\\wwwroot\\Resources\\Uploads\\passport.pdf",
+      "PackagePath": "staticwebassets\\Resources\\Uploads\\passport.pdf"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.ServiceManagement.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.build.ServiceManagement.WebAPI.props",
+      "PackagePath": "build\\ServiceManagement.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.buildMultiTargeting.ServiceManagement.WebAPI.props",
+      "PackagePath": "buildMultiTargeting\\ServiceManagement.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.buildTransitive.ServiceManagement.WebAPI.props",
+      "PackagePath": "buildTransitive\\ServiceManagement.WebAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

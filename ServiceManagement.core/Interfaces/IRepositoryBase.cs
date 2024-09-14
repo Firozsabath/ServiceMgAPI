@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceManagement.Domain.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -11,7 +12,8 @@ namespace ServiceManagement.Domain.Interfaces
     {
         //IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null);
         IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, params Expression<Func<T, object>>[] includeProperties);
-        T Get(Expression<Func<T, bool>> filter, params Expression<Func<T, object>>[] includeProperties);             
+        T Get(Expression<Func<T, bool>> filter, params Expression<Func<T, object>>[] includeProperties);
+        Task<PagedResponseOffset<T>> GetWithOffsetPagination(int pageNumber, int pageSize);
         void Add(T entity);
         void AddRange(IEnumerable<T> entities);
         void Update(T entity);        

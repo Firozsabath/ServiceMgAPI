@@ -14,5 +14,6 @@ namespace ServiceManagement.Domain.Entities
         public string? Description { get; set; }
 
         public IEnumerable<ServiceRequests>? ServiceRequests { get; set; }
+        public IEnumerable<TechniciansNotes>? TechniciansNotes { get; set; }
     }
 }

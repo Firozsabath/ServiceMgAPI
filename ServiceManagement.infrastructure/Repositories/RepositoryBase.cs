@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using ServiceManagement.Domain.Interfaces;
+using ServiceManagement.Domain.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,6 +72,19 @@ namespace ServiceManagement.EFCore.Repositories
             }
 
             return query.ToList();
+        }
+
+        public async Task<PagedResponseOffset<T>> GetWithOffsetPagination(int pageNumber, int pageSize)
+        {
+            var totalRecords = await this.dbset.AsNoTracking().CountAsync();
+            IQueryable<T> query = this.dbset;
+            query = query.AsNoTracking()
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize);
+            
+            var resp = new PagedResponseOffset<T>(query.ToList(), pageNumber,  pageSize, totalRecords);
+
+            return resp;
         }
 
         //public IEnumerable<T> GetAll(System.Linq.Expressions.Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
